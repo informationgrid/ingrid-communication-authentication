@@ -26,7 +26,7 @@ public class BasicSchemeConnector implements IHttpProxyAuthenticator {
     public boolean connect(Socket socket, String host, int port) throws IOException {
         DataInputStream dataInput = createInput(socket);
         DataOutputStream dataOutput = createOutput(socket);
-        StringBuilder errorBuffer = new StringBuilder();
+        StringBuffer errorBuffer = new StringBuffer();
         String command = createConnectCommand(host, port);
         errorBuffer.append(command);
         dataOutput.write(command.getBytes());
@@ -43,7 +43,7 @@ public class BasicSchemeConnector implements IHttpProxyAuthenticator {
     public boolean connect(Socket socket, String host, int port, String userName, String password) throws IOException {
         DataInputStream dataInput = createInput(socket);
         DataOutputStream dataOutput = createOutput(socket);
-        StringBuilder errorBuffer = new StringBuilder();
+        StringBuffer errorBuffer = new StringBuffer();
         String command = createConnectCommand(host, port, userName, password);
         errorBuffer.append(command);
         dataOutput.write(command.getBytes());
@@ -92,7 +92,7 @@ public class BasicSchemeConnector implements IHttpProxyAuthenticator {
         builder.append(("Proxy-Authorization: " + auth + CRLF));
     }
 
-    private boolean readMessageFromHttpProxy(DataInputStream dataInput, StringBuilder errorBuffer) throws IOException {
+    private boolean readMessageFromHttpProxy(DataInputStream dataInput, StringBuffer errorBuffer) throws IOException {
         boolean ret = false;
         byte[] buffer = new byte[1024];
         while ((dataInput.read(buffer, 0, buffer.length)) != -1) {
