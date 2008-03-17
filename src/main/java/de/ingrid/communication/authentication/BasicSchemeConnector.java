@@ -10,12 +10,12 @@ import java.io.OutputStream;
 import java.net.Socket;
 
 import org.apache.commons.codec.binary.Base64;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 
 public class BasicSchemeConnector implements IHttpProxyAuthenticator {
 
-    private static Log LOG = LogFactory.getLog(BasicSchemeConnector.class);
+    private static Logger LOG = Logger.getLogger(BasicSchemeConnector.class);
 
     private static final String CRLF = "\r\n";
 
@@ -33,7 +33,7 @@ public class BasicSchemeConnector implements IHttpProxyAuthenticator {
         dataOutput.flush();
         boolean success = readMessageFromHttpProxy(dataInput, errorBuffer);
         if (!success) {
-            if (LOG.isErrorEnabled()) {
+            if (LOG.isEnabledFor(Level.WARN)) {
                 LOG.error(errorBuffer);
             }
         }
@@ -50,7 +50,7 @@ public class BasicSchemeConnector implements IHttpProxyAuthenticator {
         dataOutput.flush();
         boolean success = readMessageFromHttpProxy(dataInput, errorBuffer);
         if (!success) {
-            if (LOG.isErrorEnabled()) {
+            if (LOG.isEnabledFor(Level.WARN)) {
                 LOG.error(errorBuffer);
             }
         }
