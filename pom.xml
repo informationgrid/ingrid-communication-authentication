@@ -6,7 +6,7 @@
 	<artifactId>ingrid-communication-authentication</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0-SNAPSHOT</version>
-	<name>ingrid-communication-gateway</name>
+	<name>Ingrid Communication Authentication</name>
 	<scm>
 		<connection>
 			scm:svn:https://127.0.0.1:444/svn/ingrid/ingrid-communication-authentication/trunk
