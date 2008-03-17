@@ -13,7 +13,7 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
-public class BasicSchemeConnector implements IHttpProxyAuthenticator {
+public class BasicSchemeConnector implements IHttpProxyConnector {
 
     private static Logger LOG = Logger.getLogger(BasicSchemeConnector.class);
 
