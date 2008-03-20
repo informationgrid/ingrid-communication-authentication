@@ -19,9 +19,9 @@ public class BasicSchemeConnector implements IHttpProxyConnector {
 
     private static final String CRLF = "\r\n";
 
-    private static final String ACCEPT_MESSAGE_HTTP_1_1 = "HTTP/1.1 200 OK";
+    private static final String ACCEPT_MESSAGE_HTTP_1_1 = "HTTP/1.1 200";
 
-    private static final String ACCEPT_MESSAGE_HTTP_1_0 = "HTTP/1.0 200 OK";
+    private static final String ACCEPT_MESSAGE_HTTP_1_0 = "HTTP/1.0 200";
 
     public boolean connect(Socket socket, String host, int port) throws IOException {
         DataInputStream dataInput = createInput(socket);
