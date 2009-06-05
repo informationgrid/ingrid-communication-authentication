@@ -3,7 +3,7 @@
 	<groupId>de.ingrid.communication</groupId>
 	<artifactId>ingrid-communication-authentication</artifactId>
 	<packaging>jar</packaging>
-	<version>1.2-SNAPSHOT</version>
+	<version>1.2.0-SNAPSHOT</version>
 	<name>Ingrid Communication Authentication</name>
 	<scm>
 		<connection>scm:svn:https://127.0.0.1:444/svn/ingrid/ingrid-communication-authentication/trunk</connection>
@@ -46,16 +46,13 @@
 			<uniqueVersion>false</uniqueVersion>
 			<id>ingrid-repository</id>
 			<name>ingrid-repository</name>
-			<url>file:///srv/www/htdocs/ingrid/maven</url>
-			<layout>legacy</layout>
+			<url>file:///srv/www/htdocs/ingrid/maven2</url>
 		</repository>
 		<snapshotRepository>
 			<uniqueVersion>false</uniqueVersion>
 			<id>ingrid-repository</id>
 			<name>ingrid-repository</name>
-			<url>file:///srv/www/htdocs/ingrid/maven</url>
-			<layout>legacy</layout>
+			<url>file:///srv/www/htdocs/ingrid/maven2</url>
 		</snapshotRepository>
-	</distributionManagement>
-	
+	</distributionManagement>	
 </project>
